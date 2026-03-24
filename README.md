@@ -18,7 +18,24 @@ SPA de Recrutamento e Seleção de RH desenvolvido com **Angular 21**, **Tailwin
 
 ## Como executar
 
+### Desenvolvimento (Firebase real)
 ```bash
 npm install
 npm run start
 ```
+
+### Ambiente Local com Emulador (sem internet, dados isolados)
+
+> Requer [Firebase CLI](https://firebase.google.com/docs/cli) instalado globalmente: `npm install -g firebase-tools`
+
+```bash
+npm run start:local
+```
+
+| Serviço | URL |
+|---|---|
+| App Angular | http://localhost:4200 |
+| Firebase Auth Emulator API | http://localhost:9099 |
+| Emulator UI (admin) | http://localhost:4000 |
+
+> ⚠️ Os dados do emulador são **efêmeros** — resetam ao encerrar o processo.

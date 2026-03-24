@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
-  /** Quando true, conecta ao Firebase Auth Emulator. Para uso local apenas. */
-  useEmulator: false,
+  /** Quando true, conecta ao Firebase Auth Emulator em localhost:9099. */
+  useEmulator: true,
   firebase: {
     apiKey: "AIzaSyDZ6D5jJXFzuaLAr-z2VYSQWqJnFzvKkmk",
     authDomain: "app-selecao-2ebd0.firebaseapp.com",

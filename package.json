@@ -4,9 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:local": "concurrently --kill-others --names \"EMULATOR,ANGULAR\" --prefix-colors \"yellow,cyan\" \"firebase emulators:start --only auth\" \"ng serve --configuration=local\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:e2e": "npx playwright test",
+    "test:e2e:ui": "npx playwright test --ui",
     "lint": "ng lint",
     "format": "prettier --write \"src/**/*.{ts,html,css}\""
   },
@@ -30,8 +33,10 @@
     "@angular/cli": "^21.2.3",
     "@angular/compiler-cli": "^21.2.0",
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.58.2",
     "@tailwindcss/postcss": "^4.1.12",
     "angular-eslint": "21.3.1",
+    "concurrently": "^9.2.1",
     "eslint": "^10.0.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
