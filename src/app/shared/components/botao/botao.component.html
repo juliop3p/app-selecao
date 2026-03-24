@@ -1,0 +1,7 @@
+<button
+  [type]="tipo()"
+  [disabled]="carregando() || desabilitado()"
+  class="w-full rounded-md bg-slate-900 py-2.5 text-sm font-medium text-white transition hover:bg-slate-700 disabled:opacity-40 disabled:cursor-not-allowed"
+>
+  {{ carregando() ? rotuloCarregando() : rotulo() }}
+</button>

@@ -1,0 +1,15 @@
+<div class="space-y-1">
+  <label class="block text-[11px] uppercase font-medium tracking-wider text-slate-500">
+    {{ rotulo() }}
+  </label>
+
+  <input [type]="tipo()" [formControl]="controle()" [placeholder]="placeholder()"
+    class="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:ring-1 focus:ring-slate-400"
+    [class.border-red-400]="controle().invalid && (controle().touched || controle().dirty)" />
+
+  @for (erro of erros(); track erro.chave) {
+  @if (controle().touched && (controle().errors?.[erro.chave] || erroExterno()?.[erro.chave])) {
+  <p class="text-red-500 text-[11px]">{{ erro.mensagem }}</p>
+  }
+  }
+</div>
